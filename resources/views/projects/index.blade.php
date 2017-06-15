@@ -23,6 +23,7 @@
       <div class="clearfix"></div>
       <div class="row">
         <div class="col-md-12 col-sm-12 col-xs-12">
+        @include('message.errors')
           <div class="x_panel">
             <div class="x_title">
               <ul class="nav navbar-right panel_toolbox">
@@ -47,18 +48,34 @@
                 <thead>
                   <tr>
                     <th>Name</th>
-                    <th>Alias</th>
+                    <th>Description</th>
                     <th>Sort_oder</th>
-                    <th>Link</th>
-                    <th>Type</th>
+                    <th>Active</th>
+                    <th>Users</th>
                     <th>Created_at</th>
                     <th>Update_at</th>
                     <th>Action</th>
-                    
                   </tr>
                 </thead>
                 <tbody>
-                   
+                   @foreach($projects as $row)
+                   <tr>
+                      <td>{{$row->name}}</td>
+                      <td>{{$row->description}}</td>
+                      <td>{{$row->sort_order}}</td>
+                      <td>
+                        @if($row->is_active == 1)
+                            {{'Yes'}}
+                        @else
+                            {{'No'}}
+                        @endif
+                      </td>
+                      <td>{{$row->User->name}}</td>
+                      <td>{{$row->created_at}}</td>
+                      <td>{{$row->updated_at}}</td>
+                      <td></td>
+                    </tr>
+                   @endforeach
                 </tbody>
             </table>
           </div>

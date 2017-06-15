@@ -20,5 +20,10 @@ class Projects extends Model
    {
    		return $this->hasManyThrough('App\UptimeData','App\Uptimes','id_projects','id_uptimes','id');
    }
+    public function User()
+   {
+     # code...
+    return $this->belongsTo('App\User');
+   }
 
 }

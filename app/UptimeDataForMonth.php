@@ -10,7 +10,7 @@ class UptimeDataForMonth extends Model
 
     protected $fillable = [
     	'uptime_data_id','month','ratio'
-    ],
+    ];
 
     public function UptimeData()
     {

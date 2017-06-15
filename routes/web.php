@@ -18,4 +18,8 @@ Route::get('trangchu',function()
 {
 	return view('layouts.index');
 });
-Route::resource('user','UserController');
+/*Route::resource('user','UserController');*/
+
+/*projects*/
+Route::resource('projects','ProjectController');
+/*end*/

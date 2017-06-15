@@ -61,7 +61,7 @@ class UserController extends Controller
                 'email'         =>  'required|unique:users,email|max:255|email',
                 'password'      =>  'required|min:3|max:255',
                 'phone'         =>  'required|min:3|max:15',
-                'sort_order'   =>   'required|min:3|max:15',
+                'sort_order'    =>   'required|min:3|max:15',
             ],$message);
             if($validator->fails()){
                 return redirect()->back()->withInput($data)->withErrors($validator);
@@ -86,7 +86,7 @@ class UserController extends Controller
      * @param  string  $name
      * @return \Illuminate\Http\Response
      */
-    }
+    
 
     /**
      * Display the specified resource.

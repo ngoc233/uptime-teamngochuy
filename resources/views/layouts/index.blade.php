@@ -56,7 +56,7 @@
             <!-- sidebar menu -->
             @include('layouts.slidebar_menu')
             <!-- /sidebar menu -->
-
+            
             <!-- /menu footer buttons -->
             @include('layouts.menu_footer')
             <!-- /menu footer buttons -->
@@ -67,8 +67,9 @@
             @include('layouts.top')
         <!-- /top navigation -->
 
+ 
         <!-- page content -->
-
+    
              @yield('content')
         
         <!-- /page content -->
@@ -108,6 +109,8 @@
 
     <!-- Custom Theme Scripts -->
     <script src="{{asset('admin_asset/build/js/custom.min.js')}}"></script>
+    <script src="{{asset('admin_asset/my.js')}}"></script>
+
 
     <!-- ckeditor -->
     <script type="text/javascript" language="javascript" src="{{asset('admin_asset/ckeditor/ckeditor.js')}}" ></script>

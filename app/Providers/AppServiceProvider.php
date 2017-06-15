@@ -26,5 +26,7 @@ class AppServiceProvider extends ServiceProvider
     public function register()
     {
         //
+        $this->app->bind(BookRepositoryContract::class, BookRepository::class);
+
     }
 }
